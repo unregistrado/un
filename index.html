@@ -30,7 +30,7 @@
         max-width: 600px;
         padding: 40px;
         background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
+        border-radius: 15px;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px); /* For Safari */
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -39,7 +39,7 @@
         overflow: hidden;
         /* Old TV/VCR effect */
         filter: contrast(1.2) brightness(0.9);
-        animation: flicker 2s infinite;
+        animation: flicker 4s infinite;
         margin-top: auto;
         margin-bottom: auto;
     }
@@ -47,8 +47,8 @@
     h1 {
         font-size: 48px;
         margin: 0 0 20px;
-        color: rgb(57, 53, 63);
-        -webkit-text-stroke: 1px rgb(170, 122, 212); /* Adds a colored stroke around the text */
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 1px rgb(18, 18, 18); /* Adds a colored stroke around the text */
     }
 
     p {
@@ -71,7 +71,7 @@
             rgba(255, 255, 255, 0.03) 2px,
             rgba(255, 255, 255, 0.03) 4px
         );
-        animation: scanlines 0.5s infinite linear;
+        /* animation: scanlines 0.5s infinite linear; */
         pointer-events: none;
     }
 
