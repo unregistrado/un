@@ -19,7 +19,6 @@
             color: #fff;
             display: flex;
             flex-direction: column;
-            align-items: center;
             min-height: 100vh;
         }
 
@@ -28,13 +27,22 @@
             width: 100%;
             background: rgba(0, 0, 0, 0.5);
             position: fixed;
-            top: 0;
             left: 0;
             z-index: 100;
             display: flex;
             justify-content: center;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            top: 0;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            bottom: 0;
         }
 
         nav ul {
@@ -77,6 +85,7 @@
             max-width: 800px;
             padding: 60px 40px;
             margin-top: 80px; /* To avoid overlap with fixed navbar */
+            margin-bottom: 80px; /* To avoid overlap with bottom navbar */
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             backdrop-filter: blur(10px);
@@ -86,6 +95,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            align-self: center;
             /* Old TV/VCR effect */
             filter: contrast(1.2) brightness(0.9);
         }
@@ -229,16 +239,13 @@
                 width: 90%;
                 padding: 30px;
                 margin-top: 70px;
+                margin-bottom: 70px;
             }
             nav ul li {
                 margin: 0 10px;
             }
             nav ul li a {
                 font-size: 16px;
-            }
-            .social-icons a {
-                font-size: 20px;
-                margin: 0 10px;
             }
             .character-profile {
                 flex-direction: column;
@@ -260,8 +267,8 @@
 </head>
 <body>
 
-    <!-- Navigation Menu -->
-    <nav>
+    <!-- Top Navigation Menu -->
+    <nav class="top-nav">
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
             <li><a href="#" onclick="showSection('story')">Story</a></li>
@@ -313,7 +320,7 @@
         <!-- Placeholder Character 1 -->
         <div class="character-profile">
             <div class="character-photo flicker">
-                <img src="1.png" alt="Character 1">
+                <img src="character1.png" alt="Character 1">
             </div>
             <div class="character-details">
                 <h3>Character 1</h3>
@@ -336,15 +343,14 @@
         <button onclick="alert('Thank you for joining!')" style="padding: 15px 30px; font-size: 18px; font-family: 'Orbitron', sans-serif; background-color: rgba(0, 255, 255, 0.2); border: none; border-radius: 5px; color: #fff; cursor: pointer;">Join the Revolution</button>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Connect with us:</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-discord"></i></a>
-            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
+    <!-- Bottom Navigation Bar with Social Icons -->
+    <nav class="bottom-nav">
+        <ul>
+            <li><a href="#"><i class="fab fa-discord"></i></a></li>
+            <li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </nav>
 
     <!-- JavaScript to handle section display and flicker effect -->
     <script>
