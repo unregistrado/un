@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unregistered</title>
+<style>
+    /* Import Cyberpunk-style font */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    /* Import Font Awesome for social media icons */
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: url('bk.png') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Orbitron', sans-serif;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh; /* Ensure body fills the viewport */
+    }
+
+    .glass {
+        position: relative; /* Needed for pseudo-elements positioning */
+        width: 80%;
+        max-width: 600px;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        text-align: center;
+        overflow: hidden;
+        /* Old TV/VCR effect */
+        filter: contrast(1.2) brightness(0.9);
+        animation: flicker 2s infinite;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin: 0 0 20px;
+        color: rgb(57, 53, 63);
+        -webkit-text-stroke: 1px rgb(170, 122, 212); /* Adds a colored stroke around the text */
+    }
+
+    p {
+        font-size: 18px;
+        color: #fff;
+        text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    }
+
+    /* Scan lines effect */
+    .glass::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        background: repeating-linear-gradient(
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.03) 2px,
+            rgba(255, 255, 255, 0.03) 4px
+        );
+        animation: scanlines 0.5s infinite linear;
+        pointer-events: none;
+    }
+
+    @keyframes scanlines {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* More Random Flicker Effect */
+    @keyframes flicker {
+        0% { opacity: 1; }
+        2% { opacity: 0.8; }
+        4% { opacity: 1; }
+        8% { opacity: 0.9; }
+        10% { opacity: 1; }
+        14% { opacity: 0.85; }
+        16% { opacity: 1; }
+        20% { opacity: 0.95; }
+        22% { opacity: 1; }
+        30% { opacity: 0.9; }
+        32% { opacity: 1; }
+        40% { opacity: 0.88; }
+        42% { opacity: 1; }
+        55% { opacity: 0.92; }
+        57% { opacity: 1; }
+        70% { opacity: 0.9; }
+        72% { opacity: 1; }
+        85% { opacity: 0.95; }
+        87% { opacity: 1; }
+        100% { opacity: 1; }
+    }
+
+    /* Footer Styles */
+    footer {
+        margin: 20px 0;
+        text-align: center;
+        color: #fff;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        color: #fff;
+        margin: 0 15px;
+        font-size: 24px;
+        transition: color 0.3s;
+        text-decoration: none;
+    }
+
+    .social-icons a:hover {
+        color: #00ffff; /* Neon cyan on hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .glass {
+            width: 90%;
+            padding: 30px;
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin: 0 10px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="glass">
+    <h1>Unregistered</h1>
+    <p>Defy the Algorithm, Rewrite Your Destiny</p>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</div>
+
+
+
+</body>
+</html>
